@@ -1,0 +1,10 @@
+Install Emacs
+
+In a directory under the project, run:
+  /path/to/cogini-emacs/magit.sh
+
+Or:
+  magit
+If you have done this once
+  sudo ln -s /absolute/path/to/cogini-emacs/magit.sh /usr/local/bin/magit
+
