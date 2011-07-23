@@ -48,7 +48,6 @@
 (defadvice ido-setup-completion-map (after set-ido-up-down-keys activate)
   (define-key ido-completion-map (kbd "<down>") 'ido-next-match)
   (define-key ido-completion-map (kbd "<up>") 'ido-prev-match))
-
 (define-key global-map (kbd "S-<up>") 'windmove-up)
 (define-key global-map (kbd "S-<down>") 'windmove-down)
 (define-key global-map (kbd "S-<left>") 'windmove-left)
@@ -61,7 +60,7 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 (setq ediff-split-window-function 'split-window-horizontally)
 (setq split-height-threshold nil)
-(setq split-width-threshold 0)
+(setq split-width-threshold 80)
 
 ;;; Invoke magit, finally
 (call-interactively 'magit-status)
