@@ -292,7 +292,7 @@
          (magit-branch
           ((t (:inherit font-lock-function-name-face))))
          (magit-diff-file-header
-          ((t (:foreground ,red))))
+          ((t (:foreground ,cyan+1))))
          (magit-diff-hunk-header
           ((t (:inherit font-lock-builtin-face :italic t))))
          (magit-log-head-label-default
