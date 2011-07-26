@@ -5,5 +5,5 @@
 BASE_DIR="$( dirname "$( readlink -f "$0" )")"
 
 # 256 colors mean better-looking theme
-env TERM=xterm-256color COGINI_EMACS=$BASE_DIR emacs -nw -Q -l $BASE_DIR/init.el
+env TERM=xterm-256color COGINI_EMACS=$BASE_DIR emacs -nw -q --no-splash -l $BASE_DIR/init.el
 
