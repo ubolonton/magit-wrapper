@@ -10,6 +10,7 @@
 ;; All patches welcome
 
 (require 'color-theme)
+;; (require 'color-util)                  ; color conversion
 
 ;;; TODO: Use Emacs 24's deftheme
 ;;; TODO: Give better names e.g. +1 +2 -1 -2 or ++ --
@@ -42,33 +43,33 @@
     (fg-3        "#454E56" "#808080")
 
     (red         "#FF0000" "#FF0000")                 ; Red
-    (red-1       "#F86155" "#F86155")
-    (red-3       "#A52A2A" "#A52A2A")
+    (red-1       "#F86155" "#FF5F5F")
+    (red-3       "#D98D54" "#D7875F")
     (red-4       "#8B0000" "#870000")
 
-    (orange      "#FF8C00" "#FF8C00")          ; DarkOrange
-    (orange-1    "#FF4500" "#FF4500")           ; OrangeRed
+    (orange      "#FF8C00" "#FF8700")          ; DarkOrange
+    (orange-1    "#FF4500" "#FF5F00")           ; OrangeRed
 
-    (gold        "#EEDD82" "#EEDD82")      ; LightGoldenRod
-    (gold-1      "#B8860B" "#B8860B")       ; DarkGoldenRod
+    (gold        "#EEDD82" "#D7D787")      ; LightGoldenRod
+    (gold-1      "#B8860B" "#AF8700")       ; DarkGoldenRod
 
     (yellow      "#FFFF00" "#FFFF00")              ; Yellow
-    (yellow-1    "#9ACD32" "#9ACD32")         ; YellowGreen
+    (yellow-1    "#9ACD32" "#87D75F")         ; YellowGreen
 
     (green       "#00EE00" "#87FF87")              ; Green2
-    (green-1     "#228B22" "#008700")         ; ForestGreen
-    (green-2     "#2E8B57" "#2E8B57")            ; SeaGreen
-    (green-3     "#90EE90" "#90EE90")          ; LightGreen
+    (green-1     "#228B22" "#00875F")         ; ForestGreen
+    (green-2     "#2E8B57" "#00875F")            ; SeaGreen
+    (green-3     "#90EE90" "#87FF87")          ; LightGreen
 
-    (cyan        "#00CDCD" "#00CDCD")               ; Cyan3
-    (cyan+1      "#00FA9A" "#00FA9A")   ; MediumSpringGreen
-    (cyan+2      "#66CDAA" "#66CDAA")         ; Aquamarine3
-    (cyan+3      "#89A1F3" "#89A1F3")
+    (cyan        "#00CDCD" "#00D7D7")               ; Cyan3
+    (cyan+1      "#00FA9A" "#00FF87")   ; MediumSpringGreen
+    (cyan+2      "#66CDAA" "#5FD7AF")         ; Aquamarine3
+    (cyan+3      "#89A1F3" "#87AFFF")
 
     (blue        "#008FDF" "#0087AF")
-    (blue-1      "#6A5ACD" "#6A5ACD")
+    (blue-1      "#6A5ACD" "#5F5FD7")
     
-    (purple      "#805DBB" "#CD00CD")
+    (purple      "#805DBB" "#875F87")
     ))
 
 ;;;###autoload
@@ -149,7 +150,7 @@
          (font-lock-preprocessor-face
           ((t (:foreground ,red-3))))
          (font-lock-reference-face
-          ((t (:foreground ,blue-1)))) ; What's this?
+          ((t (:foreground ,blue-1))))  ; What's this?
          (font-lock-regexp-grouping-backslash
           ((t (:foreground ,bg+1))))
          (font-lock-regexp-grouping-construct
@@ -179,7 +180,7 @@
          (highline-face
           ((t (:background ,green-2)))) ; What's this?
          (zmacs-region
-          ((t (:inherit region)))) ; What's this?
+          ((t (:inherit region))))      ; What's this?
          (text-cursor
           ((t (:background ,yellow :foreground ,bg)))) ; What's this?
          (minibuffer-prompt
@@ -487,7 +488,7 @@
       (setq
        anything-c-buffers-face2 'font-lock-builtin-face
        anything-c-buffers-face3 'italic
-       hl-paren-colors '("Orange" ,yellow "Greenyellow"
+       hl-paren-colors `("Orange" ,yellow "Greenyellow"
                          ,green "Springgreen" "Cyan"
                          ,blue-1 "Magenta" "Purple"
                          "Orange" ,yellow "Greenyellow"
