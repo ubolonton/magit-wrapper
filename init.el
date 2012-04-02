@@ -2,12 +2,12 @@
 (let ((init-dir (getenv "COGINI_EMACS")))
   (unless (equal "/" (substring init-dir -1))
     (setq init-dir (concat init-dir "/")))
-  (mapcar (lambda (dir)
-            (add-to-list 'load-path
-                         (concat init-dir dir)))
-          '("" "magit")))
+  (mapc (lambda (dir)
+          (add-to-list 'load-path
+                       (concat init-dir dir)))
+        '("" "magit")))
 
-;;; My theme rulez
+;;; My theme rulez, except weird gammas kill it
 (require 'ubolonton-dark)
 (color-theme-ubolonton-dark)
 
@@ -52,6 +52,8 @@
 (define-key global-map (kbd "S-<down>") 'windmove-down)
 (define-key global-map (kbd "S-<left>") 'windmove-left)
 (define-key global-map (kbd "S-<right>") 'windmove-right)
+(define-key magit-log-edit-mode-map (kbd "s-s") 'magit-log-edit-commit)
+(define-key magit-log-edit-mode-map (kbd "C-x C-s") 'magit-log-edit-commit)
 
 ;;; Some options to make life easier
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
@@ -64,4 +66,3 @@
 
 ;;; Invoke magit, finally
 (call-interactively 'magit-status)
-
