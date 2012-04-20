@@ -1,5 +1,5 @@
 ;;; Load paths
-(let ((init-dir (getenv "COGINI_EMACS")))
+(let ((init-dir (getenv "MAGIT_DIR")))
   (unless (equal "/" (substring init-dir -1))
     (setq init-dir (concat init-dir "/")))
   (mapc (lambda (dir)
