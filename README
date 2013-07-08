@@ -1,4 +1,4 @@
-Install Emacs
+Install Emacs 23+ (OS X's default Emacs is 22)
 
 git clone --recursive https://github.com/ubolonton/magit-wrapper.git /path/to/magit-wrapper
 
