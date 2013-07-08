@@ -1,10 +1,11 @@
 Install Emacs
 
+git clone --recursive https://github.com/ubolonton/magit-wrapper.git /path/to/magit-wrapper
+
 In a directory under the project, run:
-  /path/to/cogini-emacs/magit.sh
+  /path/to/magit-wrapper/magit.py
 
 Or:
   magit
 If you have done this once
-  sudo ln -s /absolute/path/to/cogini-emacs/magit.sh /usr/local/bin/magit
-
+  sudo ln -s /absolute/path/to/magit-wrapper/magit.py /usr/local/bin/magit
